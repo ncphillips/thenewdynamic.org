@@ -1,23 +1,27 @@
 var 
-    gulp            = require('gulp'),
-    prefix          = require('gulp-autoprefixer'),
+    gulp            = require('gulp'),    
     browserSync     = require('browser-sync'),
+    
+    // CSS
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),
+    postcss    = require('gulp-postcss'),
+    precss    = require('precss'),
+    // JS
     concat          = require('gulp-concat'),
     copy            = require('gulp-copy'),
+    // JEKYLL
     cp              = require('child_process'),
-    cssnano         = require('gulp-cssnano'),
+    // Utilities
     notify          = require('gulp-notify'),
     plumber         = require('gulp-plumber'),
     rename          = require('gulp-rename'),
-    sass            = require('gulp-sass'),
     uglify          = require('gulp-uglify'),
     util            = require('gulp-util'),
-    watch           = require('gulp-watch'),
-    nodeBourbon     = require('node-bourbon'),
-    nodeNeat        = require('node-neat'),
-    nodeSass        = require('node-sass');
+    watch           = require('gulp-watch')
+    ;
 
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+//var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -31,7 +35,9 @@ var paths =
     "filesSrcJsDest":"assets/js",
 
     "scssSrc":"_app/_scss",
-    "cssDist":"assets/css",
+    "cssSrc":"_app/css",
+    "cssDest":"assets/css",
+    "cssBuildFolder":"_site/assets/css",
     "BroswerSyncCssDist":"_site/assets/css",
 
     "scriptsSrc":[
@@ -70,6 +76,14 @@ gulp.task('js-uglify', function() {
 }); 
 
 
+var jekyllConfig = {
+  
+    "src":    ".",
+    "dest":   "_site",
+    "config": '_config.yml'
+  
+};
+
 
 
 /**
@@ -81,8 +95,9 @@ gulp.task('jekyll-build', function (done) {
     var jekyllEnv = process.env;
     jekyllEnv.JEKYLL_ENV = 'production';
     //jekyllEnv.JEKYLL_ENV = 'development';
+    //return cp.spawn(jekyll, ['build'], {stdio: 'inherit', env:jekyllEnv})
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + jekyllConfig.src, '--destination=' + jekyllConfig.dest, '--config=' + jekyllConfig.config], { stdio: 'inherit',  env:jekyllEnv })
 
-    return cp.spawn(jekyll, ['build'], {stdio: 'inherit', env:jekyllEnv})
         .on('close', done);
 });
 
@@ -99,7 +114,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['css', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -112,22 +127,40 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', function () {
-    return gulp.src(paths.scssSrc + '/main.scss')
-        .pipe(sass({
-            includePaths: require('node-neat').includePaths,
-            onError: browserSync.notify
-        }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}))
-         .pipe(cssnano({
-      discardComments: {removeAll: false} //being non-commital on removing comments.
-    }))
-        .pipe(gulp.dest('assets/css'));
-});
+// gulp.task('sass', function () {
+//     return gulp.src(paths.scssSrc + '/main.scss')
+//         .pipe(sass({
+//             //includePaths: require('node-neat').includePaths,
+//             onError: browserSync.notify
+//         }))
+//         .pipe(prefix())
+//         .pipe(rename({ extname: '.min.css' }))
+//         .pipe(gulp.dest(paths.cssBuildFolder))
+//         .pipe(browserSync.reload({stream:true}))
+//          .pipe(cssnano({
+//       discardComments: {removeAll: false} //being non-commital on removing comments.
+//     }))
+//         .pipe(gulp.dest('assets/css'));
+// });
 
+
+
+
+gulp.task('css', function () {
+    var processors = [
+        precss(),
+        autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: false }),
+        cssnano(),
+    ];
+    return gulp.src(paths.cssSrc + '/*.css')
+        .pipe(postcss(processors))
+        .pipe(rename({ extname: '.min.css' }))
+        .pipe(gulp.dest(paths.cssBuildFolder))
+        .pipe(browserSync.reload({stream:true}))        
+        .pipe(gulp.dest(paths.cssDest))
+        
+        ;
+});
 
 
 /**
@@ -135,7 +168,7 @@ gulp.task('sass', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(paths.scssSrc + '/**/*.scss', ['sass']);
+    gulp.watch(paths.cssSrc + '/**/*.css', ['css']);
     
     gulp.watch(['**/*.md','**/*.md', '_app/_layouts/**/*.html','_app/_includes/**/*.html'], ['jekyll-rebuild']);
     

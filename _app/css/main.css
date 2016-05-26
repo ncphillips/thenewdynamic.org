@@ -1,0 +1,15 @@
+@import "base/typography";
+
+.bud {
+  color: red;
+  display: flex;
+}
+
+body { /*don't do this*/
+  background-color: steelblue;
+  color: blue;
+}
+a {
+  color: green;
+  text-decoration: none;
+}
