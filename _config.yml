@@ -158,11 +158,11 @@ github_repo: thenewdynamic
 
 
 staticman:
- allowedFields: ['tool_type', 'title', 'source', 'link', 'tool', 'content', 'email']
- branch: redesign-160714
+ allowedFields: ['tool_type', 'title', 'link', 'link', 'tool', 'content', 'email']
+ branch: master
  commitMessage: "Hey Bud, here is a new entry."
  filename: "entry{@timestamp}"
- format: json
- moderation: true
- path: "_data/links"
+ format: yml
+ moderation: false
+ path: "_data/submissions"
  requiredFields: ['title', 'source', 'email']
