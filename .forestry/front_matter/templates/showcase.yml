@@ -1,0 +1,180 @@
+---
+pages:
+- _showcase/datocms.md
+- _showcase/artandabout.md
+- _showcase/passbolt-help.md
+- _showcase/hashicorp.md
+- _showcase/vagrant.md
+- _showcase/hartwell.md
+- _showcase/donarita.md
+- _showcase/fabuwood.md
+- _showcase/boston-amazon.md
+- _showcase/letsencrypt.md
+- _showcase/brightline-org.md
+- _showcase/architracker.md
+- _showcase/collins.md
+- _showcase/lightburn.md
+- _showcase/developers-italia.md
+- _showcase/stateofeuropeantech.md
+- _showcase/sydneynewyearseve.md
+- _showcase/leanpanda.md
+- _showcase/plainlanguage.md
+- _showcase/login-gov.md
+- _showcase/us-webdesign-standards.md
+- _showcase/graphcms.md
+- _showcase/grantmakers.md
+- _showcase/himatt.md
+- _showcase/docsearch.md
+- _showcase/probot.md
+- _showcase/sourcegraph.md
+- _showcase/simply.md
+- _showcase/react.md
+- _showcase/fabric.md
+- _showcase/segment-blog.md
+- _showcase/markdownguide.md
+- _showcase/rehn.md
+- _showcase/frameai.md
+- _showcase/netlify.md
+- _showcase/formidable.md
+- _showcase/prettyflyfpv.md
+- _showcase/mozilla-developers.md
+- _showcase/forestry.md
+- _showcase/nozzle.md
+- _showcase/skcript.md
+- _showcase/smartive.md
+- _showcase/siteleaf.md
+- _showcase/crossref.md
+- _showcase/borisfx.md
+- _showcase/adhawk.md
+- _showcase/1password.md
+- _showcase/marmelab.md
+- _showcase/boston-budget-gov.md
+- _showcase/smashing-magazine.md
+- _showcase/linkingart-gallery.md
+- _showcase/html-reference.md
+- _showcase/digital-democracy.md
+- _showcase/water-for-people.md
+- _showcase/upframe.md
+- _showcase/mailta.md
+- _showcase/cinematt.md
+- _showcase/perspexilabs-com.md
+- _showcase/labs-us-gov-hugo.md
+- _showcase/boomtown-fair.md
+- _showcase/lattichq.md
+- _showcase/cardiogr-am.md
+- _showcase/serverless-com.md
+- _showcase/forest-giant.md
+- _showcase/google-ventures.md
+- _showcase/cssreference.md
+- _showcase/sketch-app.md
+- _showcase/chain-com.md
+- _showcase/earlylightmedia-com.md
+- _showcase/the-panama-papers.md
+- _showcase/malala-org.md
+- _showcase/pattern-lab.md
+- _showcase/hillary-clinton.md
+- _showcase/ibm-cloud.md
+- _showcase/blue-jay-wireless.md
+- _showcase/the-new-ebay.md
+- _showcase/getty-museum-ancient-terracottas.md
+- _showcase/sequoia-capital.md
+- _showcase/netflix-devices.md
+- _showcase/norm-daniels.md
+- _showcase/18f.md
+- _showcase/mapbox.md
+- _showcase/development-seed.md
+- _showcase/nodejsorg.md
+- _showcase/white-house-social-and-behavioral-sciences-team.md
+- _showcase/vesterheim-norwegian-american-museum.md
+- _showcase/esolia.md
+- _showcase/un-world-statistics.md
+- _showcase/segment.md
+- _showcase/the-verge-50.md
+- _showcase/healthcaregov.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: 2017-01-15 10:00:00 -0400
+- name: website
+  label: Website
+  type: text
+  hidden: false
+  default: ''
+- name: repo
+  label: Repo
+  type: text
+  hidden: false
+  default: ''
+- name: tools
+  label: Tools
+  type: list
+  hidden: false
+  default: ''
+- name: creator
+  label: Creator
+  type: field_group_list
+  fields:
+  - name: name
+    label: Name
+    type: text
+    hidden: false
+    default: ''
+  - name: role
+    label: Role
+    type: text
+    hidden: false
+    default: ''
+  - name: url
+    label: Url
+    type: text
+    hidden: false
+    default: ''
+  - name: twitter_username
+    label: Twitter username
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default:
+  - name: ''
+    role: Design/Development
+    url: ''
+    twitter_username: ''
+- name: image_path
+  label: Image path
+  type: text
+  hidden: false
+  default: ''
+- name: posted_date
+  label: Posted date
+  type: datetime
+  hidden: false
+  default: ''
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: slug
+  label: Slug
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: showcase-item
+- name: collection_name
+  label: Collection name
+  type: text
+  hidden: false
+  default: Showcase

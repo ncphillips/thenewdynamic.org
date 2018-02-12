@@ -1,0 +1,40 @@
+---
+pages:
+- _meetups/vienna-html.md
+- _meetups/the-new-dynamic.md
+- _meetups/static-web-tech-meetup.md
+- _meetups/static-berlin.md
+- _meetups/peanut-butter-and-jekyll.md
+- _meetups/jamstack-dallas.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: location
+  label: Location
+  type: text
+  hidden: false
+  default: ''
+- name: website
+  label: Website
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: class
+  label: Class
+  type: text
+  hidden: false
+  default: ''
+- name: feed
+  label: Feed
+  type: boolean
+  hidden: false
+  default: false

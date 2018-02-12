@@ -1,0 +1,256 @@
+---
+pages:
+- _tools/docusaurus.md
+- _tools/tipe.md
+- _tools/sanity.md
+- _tools/typewriter.md
+- _tools/strapi.md
+- _tools/pragma.md
+- _tools/kenticocloud.md
+- _tools/ibm-watson.md
+- _tools/headless.md
+- _tools/hashbrown.md
+- _tools/getmesh.md
+- _tools/fridge-cms.md
+- _tools/elemeno.md
+- _tools/contentstack.md
+- _tools/contentacms.md
+- _tools/coisas.md
+- _tools/cloud-cms.md
+- _tools/blackstarcms.md
+- _tools/gocommerce.md
+- _tools/pushtable.md
+- _tools/schnack.md
+- _tools/remarkbox.md
+- _tools/graphcms.md
+- _tools/minimal-theme.md
+- _tools/react-static.md
+- _tools/imgix.md
+- _tools/cloudinary.md
+- _tools/cloudinary-to-hugo.md
+- _tools/post-scheduler.md
+- _tools/isso-commenting.md
+- _tools/disqus.md
+- _tools/directus.md
+- _tools/abecms.md
+- _tools/cockpit-cms.md
+- _tools/butter-cms.md
+- _tools/shifter.md
+- _tools/nuxtjs.md
+- _tools/storyblok.md
+- _tools/cosmicjs.md
+- _tools/wyam.md
+- _tools/grow.md
+- _tools/staticland.md
+- _tools/appernetic.md
+- _tools/lektor.md
+- _tools/datocms.md
+- _tools/alembic-theme.md
+- _tools/algolia.md
+- _tools/rooftop-cms.md
+- _tools/jekyll-admin.md
+- _tools/serum.md
+- _tools/static-man.md
+- _tools/hammer-for-mac.md
+- _tools/gitlab-pages.md
+- _tools/forge.md
+- _tools/pubstorm.md
+- _tools/drive-cms.md
+- _tools/userapp.md
+- _tools/full-calendar.md
+- _tools/forestry.md
+- _tools/firebase-hosting.md
+- _tools/webpack.md
+- _tools/phenomic.md
+- _tools/marsupio.md
+- _tools/jekyll-cheatsheat.md
+- _tools/Hook-Forms.md
+- _tools/bowtie.md
+- _tools/appolo.md
+- _tools/fusejs-search.md
+- _tools/static-website-manager.md
+- _tools/jekyll-gdrive-plugin.md
+- _tools/s3_website.md
+- _tools/kickster.md
+- _tools/free-jekyll-website-template-for-nonprofits.md
+- _tools/hugo-themes.md
+- _tools/jekyll-themes.md
+- _tools/made-mistakes-jekyll-themes.md
+- _tools/pixyll-jekyll-theme.md
+- _tools/typeform.md
+- _tools/lanyon.md
+- _tools/hyde.md
+- _tools/jekyll-lambda.md
+- _tools/dr-jekylls-themes.md
+- _tools/siteleaf.md
+- _tools/meet-hyde.md
+- _tools/hexo-admin.md
+- _tools/aerobatic.md
+- _tools/nanoc.md
+- _tools/coil-cms.md
+- _tools/kirby.md
+- _tools/grav.md
+- _tools/netlify-cms.md
+- _tools/federalist.md
+- _tools/gatsby.md
+- _tools/flatmarket.md
+- _tools/upstatic.md
+- _tools/nikola.md
+- _tools/codeship.md
+- _tools/jekyll-search-with-json.md
+- _tools/tipue.md
+- _tools/google-custom-search-engine.md
+- _tools/swiftype.md
+- _tools/listjs.md
+- _tools/bitballoon.md
+- _tools/poole.md
+- _tools/brunch.md
+- _tools/surge.md
+- _tools/formspree.md
+- _tools/snipcart.md
+- _tools/shoal-hosting.md
+- _tools/proseio.md
+- _tools/google-cloud-storage.md
+- _tools/form-keep.md
+- _tools/heroku.md
+- _tools/harp-platform.md
+- _tools/statamic.md
+- _tools/pelican.md
+- _tools/octopress.md
+- _tools/hexo.md
+- _tools/harp.md
+- _tools/sculpin.md
+- _tools/knownly.md
+- _tools/gulp.md
+- _tools/grunt.md
+- _tools/crossbow.md
+- _tools/cloudcannon.md
+- _tools/osmek.md
+- _tools/github-pages.md
+- _tools/cloudflare.md
+- _tools/prismic.md
+- _tools/react.md
+- _tools/harpoon.md
+- _tools/proteus-static-site-starter-kits.md
+- _tools/lunrjs.md
+- _tools/wintersmith.md
+- _tools/contentful.md
+- _tools/tarbell.md
+- _tools/netlify.md
+- _tools/drupan.md
+- _tools/poolappcom.md
+- _tools/roots.md
+- _tools/docpad.md
+- _tools/webhook.md
+- _tools/middleman.md
+- _tools/metalsmith.md
+- _tools/hugo.md
+- _tools/jekyll.md
+- _tools/assemble.md
+- _tools/buster.md
+- _tools/middleman-blog-editor.md
+- _tools/jekyll-hook.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: tool_type
+  label: Tool type
+  type: list
+  hidden: false
+  default: ''
+- name: tag
+  label: Tag
+  type: tag_list
+  hidden: false
+  default: ''
+- name: urls
+  label: Urls
+  type: field_group
+  fields:
+  - name: post
+    label: Post
+    type: text
+    hidden: false
+    default: ''
+  - name: github
+    label: Github
+    type: text
+    hidden: false
+    default: ''
+  - name: website
+    label: Website
+    type: text
+    hidden: false
+    default: ''
+  - name: twitter
+    label: Twitter
+    type: text
+    hidden: false
+    default: ''
+  - name: slack
+    label: Slack
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+- name: posted_date
+  label: Posted date
+  type: datetime
+  hidden: false
+  default: ''
+- name: featured
+  label: Featured
+  type: boolean
+  hidden: false
+  default: ''
+- name: slug
+  label: Slug
+  type: text
+  hidden: false
+  default: ''
+- name: resources
+  label: Resources
+  type: field_group_list
+  fields:
+  - name: name
+    label: Name
+    type: text
+    hidden: false
+    default: ''
+  - name: url
+    label: Url
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: tool
+- name: collection_name
+  label: Collection name
+  type: text
+  hidden: false
+  default: " Tools"

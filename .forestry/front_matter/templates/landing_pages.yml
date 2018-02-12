@@ -1,0 +1,77 @@
+---
+pages:
+- _landing_pages/videos.md
+- _landing_pages/tools.md
+- _landing_pages/thank-you.md
+- _landing_pages/submit.md
+- _landing_pages/submit-tool.md
+- _landing_pages/submit-showcase-site.md
+- _landing_pages/submit-profile.md
+- _landing_pages/submit-job-posting.md
+- _landing_pages/slack.md
+- _landing_pages/showcase.md
+- _landing_pages/search-results.md
+- _landing_pages/links.md
+- _landing_pages/join-our-mailing-list.md
+- _landing_pages/job-board.md
+- _landing_pages/home.md
+- _landing_pages/events.md
+- _landing_pages/articles.md
+- _landing_pages/about.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: page-single
+- name: regenerate
+  label: Regenerate
+  type: boolean
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: ''
+- name: include
+  label: Include
+  type: text
+  hidden: false
+  default: ''
+- name: sitemap
+  label: Sitemap
+  type: boolean
+  hidden: false
+  default: ''
+- name: data
+  label: Data
+  type: text
+  hidden: false
+  default: ''
+- name: feed
+  label: Feed
+  type: boolean
+  hidden: false
+  default: false
+- name: exclude_from_search
+  label: Exclude from search
+  type: boolean
+  hidden: false
+  default: true

@@ -1,0 +1,42 @@
+---
+pages:
+- _tool_type/theme.md
+- _tool_type/static-site-generator.md
+- _tool_type/interaction.md
+- _tool_type/hosting-deployment.md
+- _tool_type/helper.md
+- _tool_type/content-management/headless-cms.md
+- _tool_type/content-management.md
+- _tool_type/build-tool.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: color
+  label: Color
+  type: text
+  hidden: false
+  default: ''
+- name: text_color
+  label: Text color
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: redirect_from
+  label: Redirect from
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: tools

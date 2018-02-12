@@ -1,0 +1,193 @@
+---
+pages:
+- _posts/2017-12-02-interview-michael-rose.md
+- _posts/2017-11-27-interview-with-bud-parr.md
+- _posts/2017-10-03-interview-hugo-lead-developer.md
+- _posts/2017-09-24-git-or-api-based-cms.md
+- _posts/2017-06-02-join-our-slack.md
+- _posts/2017-06-16-getting-started-with-hugo.md
+- _posts/2017-06-05-migrate-to-markdown.md
+- _posts/2017-05-23-migrating-to-static.md
+- _posts/2017-03-09-cms-as-code-roundtable-discussion.md
+- _posts/2017-02-18-jekyll-in-the-newsroom.md
+- _posts/2017-02-18-introduction-to-static-site-generators.md
+- _posts/2017-02-01-static-jamstack-podcasts.md
+- _posts/2017-01-26-interview-with-eric-gardner-getty.md
+- _posts/2017-01-06-january-meetup-offline-first-for-your-static-site--the-journey-from-cms-to-static.md
+- _posts/2016-11-18-hacker-hours-jekyll-workshop-part-ii.md
+- _posts/2016-11-07-hacker-hours-workshop-getting-going-with-jekyll.md
+- _posts/2016-09-29-go-offline-first--api-first-for-blazing-fast-and-scalable-sites.md
+- _posts/2016-08-10-the-new-dynamic-nyc-meetup-demo-forestry-io-cms-for-jekyll-and-hugo-static-sites.md
+- _posts/2016-08-09-static-cms-concept-at-forge.md
+- _posts/2016-08-04-search-for-static-sites-by-aidan-feldman.md
+- _posts/2016-05-05-dynamic-static-site-strategies-and-other-tongue-twisters.md
+- _posts/2016-01-31-dynamic-static-strategies.md
+- _posts/2016-05-09-real-world-content-strategy-with-jekyll.md
+- _posts/2016-02-04-JekyllConf-The-free-online-global-conference-for-all-things-Jekyll.md
+- _posts/2016-04-29-the-jam-stack.md
+- _posts/2016-04-11-react-static-site-generator-presentation-static-web-tech.md
+- _posts/2016-03-24-formation-jekyll-22042016-.markdown
+- _posts/2016-03-15-New-Middleman-v4-0-presented-by-its-creator-Thomas-Reynolds.md
+- _posts/2016-03-02-helpful-videos-for-getting-started-with-jekyll.md
+- _posts/2016-02-22-Static-site-generators-are-the-new-Wordpress-Milwaukee-Web-Professionals-Milwaukee-WI-Meetup.md
+- _posts/2016-02-19-Static-Showdown-Worldwide-Virtual-Hackathon-for-Progressive-Web-Apps.md
+- _posts/2016-01-31-static-sites-go-all-hollywood.md
+- _posts/2016-01-25-the-next-iteration-of-the-new-dynamic.md
+- _posts/2016-01-25-Static-is-Back-Geekfest-Seattle-Seattle-WA-Meetup.md
+- _posts/2016-01-25-Refresh-Seattle.md
+- _posts/2016-01-14-Jekyll-and-Firebase-Email-Password-Authentication-Knights-of-the-Old-Code.md
+- _posts/2016-01-14-Jekyll-and-Firebase-Basics-Knights-of-the-Old-Code.md
+- _posts/2016-01-13-zurb-foundtion-and-modern-web-tech.md
+- _posts/2015-12-02-full-stack-static.md
+- _posts/2015-11-10-how-do-static-site-generators-work.md
+- _posts/2015-10-26-presenting-jekyll-30.md
+- _posts/2015-10-05-get-the-book-static-site-generators-modern-tools-for-static-website-development.md
+- _posts/2015-09-29-lessons-learned-switching-from-wordpress-to-middleman-a-static-site-generator.md
+- _posts/2015-09-17-generate-london.md
+- _posts/2015-09-02-webcast-static-site-generators-why-use-them-and-how-they-work.md
+- _posts/2015-07-26-cloudflare-for-static-sites.md
+- _posts/2015-06-12-video-and-slides-from-our-first-meetup.md
+- _posts/2015-04-22-all-things-jekyll-at-jekyllconf-may-2nd.md
+- _posts/2015-02-12-use-wordpress-as-the-backend-to-your-static-site-using-roots.md
+- _posts/2014-12-17-static-site-generators-coming-into-the-mainstream.md
+- _posts/2014-08-29-the-post-cms-landscape.md
+- _posts/2014-08-24-search-options-for-static-websites.md
+- _posts/2014-08-02-how-vox-media-uses-static-site-generators.md
+- _posts/2014-07-26-getting-started-with-static-site-generators.md
+- _posts/2014-06-11-jekyll-content-decision-tree.md
+- _posts/2014-05-15-welcome-to-static-is-the-new-dynamic.md
+- _posts/2014-03-14-the-no-db-landscape.md
+- _posts/2014-03-09-basics-of-markdown.md
+- _posts/2014-03-06-static-site-generators-introduction.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: subtitle
+  label: Subtitle
+  type: text
+  hidden: false
+  default: ''
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: posted_date
+  label: Posted date
+  type: datetime
+  hidden: false
+  default: ''
+- name: slug
+  label: Slug
+  type: text
+  hidden: false
+  default: ''
+- name: source
+  label: Source
+  type: text
+  hidden: false
+  default: ''
+- name: tool
+  label: Tool
+  type: list
+  hidden: false
+  default: ''
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: ''
+- name: excerpt
+  label: Excerpt
+  type: textarea
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+- name: video
+  label: Video
+  type: boolean
+  hidden: false
+  default: ''
+- name: meetup
+  label: Meetup
+  type: text
+  hidden: false
+  default: ''
+- name: start_at
+  label: Start at
+  type: datetime
+  hidden: false
+  default: ''
+- name: venue
+  label: Venue
+  type: text
+  hidden: false
+  default: ''
+- name: address
+  label: Address
+  type: text
+  hidden: false
+  default: ''
+- name: link
+  label: Link
+  type: text
+  hidden: false
+  default: ''
+- name: speakerdeck
+  label: Speakerdeck
+  type: text
+  hidden: false
+  default: ''
+- name: featured
+  label: Featured
+  type: boolean
+  hidden: false
+  default: ''
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: ''
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: ''
+- name: image
+  label: Image
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: page-single
+- name: category
+  label: Category
+  type: tag_list
+  hidden: false
+  default: article
+- name: collection_name
+  label: Collection name
+  type: text
+  hidden: false
+  default: Articles & Event Recaps

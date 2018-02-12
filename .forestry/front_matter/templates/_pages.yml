@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/:basename/"
